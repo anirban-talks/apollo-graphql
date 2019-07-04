@@ -1,0 +1,25 @@
+{
+    "persons":[
+        {
+            "name":"Anish Saxena",
+            "age":30,
+            "sex":"MALE",
+            "empId": "emp-001",
+            "role": "Manager"
+        },
+        {
+            "name":"Sumit Mishra",
+            "age": 25,
+            "sex":"MALE",
+            "empId": "emp-002",
+            "role": "Developer"
+        },
+        {
+            "name": "Sunita Kaur",
+            "age": 24,
+            "sex":"FEMALE",
+            "userId": "user-001",
+            "address": "Bangalore"
+        }
+    ]
+}

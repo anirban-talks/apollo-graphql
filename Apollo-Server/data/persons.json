@@ -1,0 +1,19 @@
+{
+    "persons":[
+        {
+            "name":"Anish Saxena",
+            "age":30,
+            "sex":"MALE"
+        },
+        {
+            "name":"Sumit Mishra",
+            "age": 25,
+            "sex":"MALE"
+        },
+        {
+            "name": "Sunita Kaur",
+            "age": 24,
+            "sex":"FEMALE"
+        }
+    ]
+}

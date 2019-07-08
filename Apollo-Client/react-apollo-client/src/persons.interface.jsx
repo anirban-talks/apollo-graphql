@@ -1,6 +1,8 @@
 import React from 'react';
 import {Query} from 'react-apollo';
 import { gql } from "apollo-boost";
+import AddPerson from './add-person';
+
 const PERSONS_QUERY = gql`
     query{
         getPersons{
@@ -37,13 +39,19 @@ const User = ({name,age,sex,userId,address}) =>
         <div>Address: {address}</div>
     </>
 ;
+const Person = ({name,sex,age}) => 
+    <>
+        <div>Name: {name}</div>
+        <div>Age: {age}</div>
+        <div>Sex: {sex}</div>
+    </>
 const decidePerson = ({__typename, ...personObj}) => {
     switch(__typename){
         case "Employee":
             return Employee(personObj);
         case "User":
             return User(personObj);
-        default: return null;
+        default: return Person(personObj);
     }
 }
 const PersonsInterface = () =>
@@ -53,6 +61,7 @@ const PersonsInterface = () =>
         if(loading) return <div className="loading">Loading...</div>
         if(error) return <div className="error">Error Occurred {error.graphQLErrors}</div>
         return <div>
+            <AddPerson/>
             <h2>Employee / User List:</h2>
             <ul className="person-list">
             {
